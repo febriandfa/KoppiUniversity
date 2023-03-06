@@ -86,6 +86,20 @@ nav .container {
   color: var(--putih);
 }
 
+.nav-item li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--putih);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-item li:hover::after {
+  width: 100%;
+}
+
 .nav-button a {
   display: flex;
   justify-content: center;
@@ -100,23 +114,54 @@ nav img {
 }
 /* Nav End */
 
-/* Main Section */
+/* Landing Section Start */
 #landing {
   display: flex;
   align-items: center;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url(./asset/bg-3.jpg);
+  background-size: cover;
+  background-position-y: 47%;
+}
+
+#landing h1 {
+  color: var(--putih);
+  font-size: 4rem;
 }
 
 #landing p {
-  text-align: center;
   width: 70%;
   padding: 1rem;
+  font-size: 1.3rem;
   margin: auto;
+  color: var(--putih);
 }
 
+.landing-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.btn-home {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--putih);
+  padding: 0.5rem 0.5rem 0.5rem;
+  margin-top: 1rem;
+  border: 2px solid var(--ketiga);
+}
+
+.btn-home:hover {
+  background-color: var(--ketiga);
+}
+/* Landing Section End */
+
+/* About Section Start */
 #about {
   height: 100%;
   background-color: var(--ketiga);
-  /* border: 1px solid black; */
 }
 
 #about h1 {
@@ -125,7 +170,6 @@ nav img {
 
 .about-content {
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
 }
@@ -139,22 +183,90 @@ nav img {
 .foto-logo {
   width: 15rem;
 }
+/* About Section End */
 
+/* Leader Section Start */
 .foto-pimpinan {
   display: block;
   max-width: 100%;
-  /* margin: 2rem auto; */
-  border: 3px solid var(--pertama);
-  border-radius: 20px;
-  /* margin-top: 5rem; */
+  /* border: 3px solid var(--pertama); */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 #leader {
   height: 100%;
 }
+/* Leader Section End */
 
-#faculty p {
+/* Faculties Section Start */
+.faculty-list {
+  height: 20rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.faculty {
+  flex-basis: 32%;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  width: 5rem;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.faculty img {
+  background-size: cover;
+  height: 100%;
+}
+
+.faculty h3 {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+}
+
+.layer {
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.layer:hover {
+  background-color: rgba(44, 54, 57, 0.7);
+}
+
+.layer p {
+  width: 95%;
+  color: var(--putih);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.layer:hover p {
+  bottom: 10%;
+  opacity: 1;
+}
+
+.layer:hover h3 {
+  color: var(--putih);
+  transition: 0.5s;
+}
+
+#faculties p {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 #facilities {
