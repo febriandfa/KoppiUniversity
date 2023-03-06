@@ -49,6 +49,13 @@ h1 {
   text-align: center;
   font-size: 3.5rem;
 }
+
+footer {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--ketiga);
+  color: var(--putih);
+  padding-top: 1rem;
+}
 /* General End */
 
 /* Nav Start */
@@ -113,6 +120,38 @@ nav img {
   align-items: center;
 }
 /* Nav End */
+
+/* Footer Start */
+footer .container {
+  border-bottom: 1px solid var(--putih);
+}
+
+footer h5 {
+  text-align: center;
+  padding: 1rem;
+}
+
+footer h3 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.social-footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1.5rem;
+}
+
+.social-footer img {
+  display: block;
+  margin: auto;
+  width: 2rem;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+/* Footer End */
 
 /* Landing Section Start */
 #landing {
@@ -200,6 +239,10 @@ nav img {
 /* Leader Section End */
 
 /* Faculties Section Start */
+#faculties {
+  height: 100%;
+}
+
 .faculty-list {
   height: 20rem;
   display: flex;
@@ -252,10 +295,11 @@ nav img {
   position: absolute;
   opacity: 0;
   transition: 0.5s;
+  text-align: center;
 }
 
 .layer:hover p {
-  bottom: 10%;
+  bottom: 20%;
   opacity: 1;
 }
 
@@ -264,11 +308,77 @@ nav img {
   transition: 0.5s;
 }
 
-#faculties p {
+#faculties .title {
   text-align: center;
   margin-bottom: 2rem;
 }
+/* Faculties Section End */
 
+/* Facilites Section Start */
 #facilities {
   text-align: center;
+  height: 100%;
 }
+
+#facilities .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 2fr 2fr;
+  grid-template-areas:
+    "title title title title"
+    "item-1 item-2 item-3 item-4"
+    "item-5 item-6 item-7 item-8";
+  gap: 2rem;
+}
+
+.facilities-title {
+  grid-area: title;
+  margin-bottom: 0.4rem;
+}
+
+#facilities img {
+  width: 13rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#facilities p:not(.facilities-title p) {
+  width: 80%;
+  margin: auto;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+
+.facilities-1 {
+  grid-area: item-1;
+}
+
+.facilities-2 {
+  grid-area: item-2;
+}
+
+.facilities-3 {
+  grid-area: item-3;
+}
+
+.facilities-4 {
+  grid-area: item-4;
+}
+
+.facilities-5 {
+  grid-area: item-5;
+}
+
+.facilities-6 {
+  grid-area: item-6;
+}
+
+.facilities-7 {
+  grid-area: item-7;
+}
+
+.facilities-8 {
+  grid-area: item-8;
+}
+/* Facilites Section End */
