@@ -216,9 +216,9 @@ p {
   width: 15rem;
 }
 
-h5 {
+h3 {
   text-align: center;
-  font-size: 2rem;
+  /* font-size: 2rem; */
 }
 
 #landing .container {
@@ -247,7 +247,7 @@ h5 {
   grid-template-areas: mission;
 }
 
-#landing h5 {
+#landing h3 {
   border-bottom: 1px solid var(--ketiga);
   width: 80%;
   margin: 0 auto 1rem;
